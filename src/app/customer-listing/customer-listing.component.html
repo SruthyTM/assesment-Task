@@ -1,0 +1,64 @@
+<div class="customer-listing">
+	<div class="listing">
+		<div class="listing-header">
+			<p class="listing-header__title"></p>
+		</div>
+		<button class="button-val" (click)="addUser()">ADD</button>
+		<table
+			class="listing-content"
+			matSort
+			(matSortChange)="sortData($event)"
+			matSortActive="Age"
+			matSortDirection="asc"
+		>
+			<thead>
+				<th>Name</th>
+				<th mat-sort-header="Age">Age</th>
+				<th mat-sort-header="phone">Phone</th>
+				<th>News Letter</th>
+				<th>Gender</th>
+				<th>Action</th>
+			</thead>
+			<tbody *ngIf="userResult && userResult.length > 0">
+				<tr *ngFor="let users of userResult; let i = index">
+					<td (click)="openCustomerModal(users.value.id)" class="list-view">
+						{{ users.value.name }}
+					</td>
+
+					<td class="list-view">
+						{{ users.value.age }}
+					</td>
+					<td class="list-view">
+						{{ users.value.phone }}
+					</td>
+					<td class="list-view">
+						{{ users.value.newsletter }}
+					</td>
+					<td class="list-view">
+						{{ users.value.gender }}
+					</td>
+					<td sry>
+						<mat-icon style="cursor: pointer;" (click)="deleteUser(users.value.id, i)"
+							>delete</mat-icon
+						>
+						<mat-icon style="cursor: pointer;" (click)="editUser(users, i)">edit</mat-icon>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="listing-footer">
+			<!-- <button [disabled]="disablePrevious" *ngIf="pageVal > 1" style="cursor: pointer;">
+				<mat-icon (click)="previous()">skip_previous</mat-icon>
+			</button>
+			{{ pageVal }}
+			<button
+				style="cursor: pointer;"
+				*ngIf="userResult && userResult.length > 0"
+				[disabled]="disableNext"
+			>
+				<mat-icon (click)="next()">skip_next</mat-icon>
+			</button> -->
+		</div>
+	</div>
+</div>

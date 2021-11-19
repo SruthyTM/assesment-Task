@@ -1,0 +1,195 @@
+:host {
+  flex: 1 1 auto;
+  display: block;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  position: relative;
+  @media only screen and (max-width: 574px) {
+    padding: 0;
+    display: flex !important;
+    flex-direction: column;
+  }
+}
+
+.customer-modal {
+  &__header {
+    background: #4275b3;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    z-index: 10;
+    padding: 16px;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+  }
+  &__close {
+    margin-left: 8rem;
+    cursor: pointer;
+    @media only screen and (max-width: 574px) {
+      margin-left: 7rem;
+    }
+  }
+  &__note-input {
+    @media only screen and (max-width: 574px) {
+      width: auto;
+    }
+  }
+  &__form {
+    display: block;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 20px;
+  }
+  &__closeModal {
+    float: right;
+    cursor: pointer;
+  }
+  &__btn-add {
+    @media only screen and (max-width: 574px) {
+      background: #4275b3 !important;
+      color: white !important;
+      height: 50px;
+      width: 19%;
+      border-radius: 0rem !important;
+      margin-top: 16px;
+    }
+  }
+  &__note-complete {
+    @media only screen and (max-width: 574px) {
+      display: flex;
+      margin-top: -1rem;
+    }
+  }
+  &__data {
+    margin-bottom: 1rem;
+    font-size: 13px;
+  }
+  &__point {
+    cursor: pointer;
+  }
+  &__notes {
+    margin-bottom: 1rem;
+    font-size: 13px;
+  }
+  &__details {
+    font-size: 9px !important;
+  }
+  &__note-width {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: 574px) {
+      width: 82%;
+      border-radius: 2px !important;
+    }
+  }
+  &__text-display {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__text-button {
+    min-height: 80px;
+    padding: 10px;
+    float: right;
+    display: block;
+    /*    margin-left: 0px !important;
+    text-align: center;
+    padding-left: 163px;
+    color: #0da994;
+    font-size: 22px;*/
+  }
+  &__no-button {
+    min-height: 80px;
+    padding: 10px;
+    display: block;
+  }
+  &__btn-close {
+    border-radius: 15px;
+    font-weight: 600;
+    line-height: 2rem;
+    padding: 0;
+    text-align: center;
+    background: transparent;
+    color: #0000ff;
+  }
+  &__btn-retry {
+    background: #4275b3;
+    font-size: 10px;
+    border-radius: 2px;
+    width: 31px;
+    line-height: 1.2rem;
+  }
+  &__advance-data {
+    color: blue;
+  }
+}
+.contract-pending {
+  color: orange;
+}
+.contract-failed {
+  color: red;
+}
+.contract-completed {
+  color: green;
+}
+.title {
+  padding: 0 24px;
+  margin-bottom: 2rem;
+}
+.color-for {
+  color: red;
+}
+
+.row {
+  padding: 2px;
+  height: 45px;
+  margin-bottom: 1rem;
+  label {
+    width: 50%;
+    float: left;
+    line-height: 42px;
+    color: #656565;
+    font-size: 18px;
+    @media only screen and (max-width: 574px) {
+      line-height: 25px !important;
+    }
+  }
+  .mat-input-element {
+    border-bottom: 1px solid #2ab5ad;
+    border-radius: 0px;
+    width: 50%;
+    float: right;
+    color: #000000;
+    font-size: 18px;
+  }
+}
+.customer-modal__close {
+  margin-left: 0px !important;
+  text-align: right;
+  color: #0da994;
+  font-size: 22px;
+}
+.custom-modalbox {
+  border-radius: 20px;
+  padding: 20px;
+}
+.mat-dialog-content {
+  padding: 20px;
+}
+.mat-dialog-title {
+  color: #8d8d8d;
+}
+.custom-options {
+  width: 50%;
+  border: 0px;
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+::ng-deep .mat-button-focus-overlay {
+  background: #fafafa;
+}

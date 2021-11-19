@@ -1,0 +1,15 @@
+<mat-dialog-content class="customer-modal-listing">
+	<h2 mat-dialog-title>Are you sure you want to delete this customer?</h2>
+</mat-dialog-content>
+<div style="display: inline;" align="center">
+	<mat-dialog-actions mat-dialog-footer align="end" class="customer-modal__text-button">
+		<a class="customer-modal__btn-close" mat-button (click)="onCloseConfirm()">
+			<div class="customer-modal__close" style="background: white;">No</div>
+		</a>
+	</mat-dialog-actions>
+	<mat-dialog-actions mat-dialog-footer align="center" class="customer-modal__text-button">
+		<a class="customer-modal__btn-close" mat-button (click)="deleteCustomer()">
+			<div class="customer-modal__close">Yes</div>
+		</a>
+	</mat-dialog-actions>
+</div>
